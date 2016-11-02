@@ -22,21 +22,6 @@ const _long = 8;
 const _pointer = 8;
 const argsArray = 100*_pointer;
 
-const configStruct  = {
-    'max_cpu_time':_int,
-    'max_real_time':_int,
-    'max_memory':_long,
-    'path':_pointer,
-    'in_file':_pointer,
-    'out_file':_pointer,
-    'err_file':_pointer,
-    'args':argsArray,
-    'env':argsArray,
-    'use_sandbox':_int,
-    'log_path':_pointer,
-    'uid':_int,
-    'gid':_int
-}
 
 function initStruct(config){
     var total_size = 4184;
