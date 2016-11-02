@@ -1,5 +1,5 @@
 {
-  "name": "judger",
+  "name": "judge_node",
   "version": "1.0.0",
   "description": "oj judger",
   "main": "index.js",
@@ -8,8 +8,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rainboy",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "ffi": "^2.1.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainboyOnlineJudge/judge_node.git"
+  },
+  "keywords": [
+    "judge"
+  ],
+  "bugs": {
+    "url": "https://github.com/RainboyOnlineJudge/judge_node/issues"
+  },
+  "homepage": "https://github.com/RainboyOnlineJudge/judge_node#readme"
 }
