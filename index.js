@@ -17,11 +17,10 @@ function judgerSync(config){
     if( check.length !== 0)
         return check;
 
-    debugger;
     if(!(config.seccomp_rule_name === 'general' || config.seccomp_rule_name === 'c_cpp'))
         config.seccomp_rule_name = null;
 
-    return binding.hello(
+    return binding.judger(
         config.max_cpu_time,
         config.max_real_time ,
         config.max_memory,
