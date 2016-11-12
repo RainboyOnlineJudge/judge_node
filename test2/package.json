@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "should": "^11.1.1"
+  }
+}
