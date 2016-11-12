@@ -156,7 +156,6 @@ function integration(){
     describe('test_args',function(){
         it('args.c',function(done){
             var config = JSON.parse( JSON.stringify(inte_config));
-
             _compile_c( join(t_path,'args.c'),function(exe_path){
                 config.exe_path = exe_path
                 config['args'] = ['test','hehe','000'];
@@ -169,8 +168,6 @@ function integration(){
                     done()
                 });
             })
-
-
         })
     })
 
