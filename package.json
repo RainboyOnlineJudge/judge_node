@@ -10,7 +10,6 @@
   "author": "Rainboy",
   "license": "MIT",
   "dependencies": {
-    "ffi": "^2.1.0"
   },
   "directories": {
     "test": "tests"
