@@ -35,7 +35,7 @@ function _compile_c(str_path){
     var out_path = join('/tmp',basename(str_path).split('.')[0]);
     _config.args = [join(path,str_path),'-o',out_path];
     var res = judgerSync(_config);
-    if(res.result.result == 0){
+    if(res.result == 0){
         return out_path;
     }
     else {

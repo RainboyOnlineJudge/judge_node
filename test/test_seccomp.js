@@ -1,7 +1,7 @@
 var should = require('should')
 var join = require('path').join;
 var judgerSync = require('../index.js').judgerSync;
-var _judger = require('../index.js')._judger;
+var _judger = require('../index.js').flag;
 
 var base = require('./base.js');
 var _compile_c = base._compile_c;
@@ -42,19 +42,19 @@ function seccomp(){
 
             // without seccomp
             var res = judgerSync(config);
-            res.result.result.should.eql(_judger.SUCCESS);
+            res.result.should.eql(_judger.SUCCESS);
 
             // with general seccomp
             config["seccomp_rule_name"] = "general"
             res = judgerSync(config);
-            res.result.result.should.eql(_judger.RUNTIME_ERROR);
-            res.result.signal.should.eql(31);
+            res.result.should.eql(_judger.RUNTIME_ERROR);
+            res.signal.should.eql(31);
 
             // with c_cpp seccomp
             config["seccomp_rule_name"] = "c_cpp"
             res = judgerSync(config);
-            res.result.result.should.eql(_judger.RUNTIME_ERROR);
-            res.result.signal.should.eql(31);
+            res.result.should.eql(_judger.RUNTIME_ERROR);
+            res.signal.should.eql(31);
 
         })
     })
@@ -69,20 +69,20 @@ function seccomp(){
             // without seccomp
             var res = judgerSync(config);
             var out = "Helloworld\n";
-            res.result.result.should.eql(_judger.SUCCESS);
+            res.result.should.eql(_judger.SUCCESS);
             out.should.eql( output_content(config.output_path))
 
             // with general seccomp
             config["seccomp_rule_name"] = "general"
             res = judgerSync(config);
-            res.result.result.should.eql(_judger.RUNTIME_ERROR);
-            res.result.signal.should.eql(31);
+            res.result.should.eql(_judger.RUNTIME_ERROR);
+            res.signal.should.eql(31);
 
             // with c_cpp seccomp
             config["seccomp_rule_name"] = "c_cpp"
             res = judgerSync(config);
-            res.result.result.should.eql(_judger.RUNTIME_ERROR);
-            res.result.signal.should.eql(31);
+            res.result.should.eql(_judger.RUNTIME_ERROR);
+            res.signal.should.eql(31);
 
         })
     })
@@ -97,20 +97,20 @@ function seccomp(){
             // without seccomp
             var res = judgerSync(config);
             var out = "test";
-            res.result.result.should.eql(_judger.SUCCESS);
+            res.result.should.eql(_judger.SUCCESS);
             out.should.eql( output_content('/tmp/fffffffffffffile.txt'))
 
             // with general seccomp
             config["seccomp_rule_name"] = "general"
             res = judgerSync(config);
-            res.result.result.should.eql(_judger.RUNTIME_ERROR);
-            res.result.signal.should.eql(31);
+            res.result.should.eql(_judger.RUNTIME_ERROR);
+            res.signal.should.eql(31);
 
             // with c_cpp seccomp
             config["seccomp_rule_name"] = "c_cpp"
             res = judgerSync(config);
-            res.result.result.should.eql(_judger.RUNTIME_ERROR);
-            res.result.signal.should.eql(31);
+            res.result.should.eql(_judger.RUNTIME_ERROR);
+            res.signal.should.eql(31);
 
         })
     })
