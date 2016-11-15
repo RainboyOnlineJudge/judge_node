@@ -8,15 +8,11 @@
 *****引用**
 
 ```
-var judgerSync  = require('judge_node').judgerSync
-var judger  = require('judge_node').judger
+var judge = require('judge_node/father.js')
 ```
 
 # 测试
 
  ```sh
-cd test/
-npm i
-cd ..
-sudo mocha
+ sudo mocha test2
  ```
