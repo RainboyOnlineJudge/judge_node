@@ -249,7 +249,7 @@ void Method(const v8::FunctionCallbackInfo<v8::Value>& args) {
 
    run_t  run =(run_t)dlsym(libm_handle,"run");
    run(_config,_result);
-    printf("_memory: %lf\n",(double)_result->memory/1024/1204);
+    //printf("_memory: %lf\n",(double)_result->memory/1024/1204);
     //PrintResult(_result);
 
   Local<Number> cpu_time = Number::New(isolate,_result->cpu_time);
