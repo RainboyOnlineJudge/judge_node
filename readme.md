@@ -8,7 +8,10 @@
 *****引用**
 
 ```
-var judge = require('judge_node/father.js')
+var judger = require('judge_node/father.js')
+judger({},function(res){
+    console.log(res)
+})
 ```
 
 # 测试
